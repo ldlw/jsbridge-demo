@@ -1,0 +1,129 @@
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body > * {
+  //这一个样式 直接保证使用rem 初始字体不会特别大
+  font-size: 0.36rem;
+}
+input::-webkit-input-placeholder{
+  color: #BBBBBB;
+}
+#app{
+  min-height: 100vh;
+  overflow: auto;
+  // color: #fff;
+  // background-color: #000000;
+  // background-color: #EDEDED;
+}
+/** 通用样式 start*/
+.row {
+  display: flex;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+}
+.sa {
+  justify-content: space-around;
+}
+.sb {
+  justify-content: space-between;
+}
+.ac {
+  align-items: center;
+}
+.jc {
+  justify-content: center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+
+.e1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.e2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.e3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+.e4 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+}
+
+.pointer-none {
+  pointer-events: none;
+}
+
+.mb-2 {
+  margin-bottom: 0.2rem;
+}
+.mb-4 {
+  margin-bottom: 0.4rem;
+}
+
+// 公共布局用
+.container {
+  width: 100%;
+  padding: 0 0.6rem;
+  box-sizing: border-box;
+  display: flex;
+  // min-height: 100vh;
+  // overflow-y: hidden;
+  background: linear-gradient(#E8EFFF, #E8EFFF, #F7F9FF);
+  .left-box, .right-box {
+    flex: 1;
+    height: 100vh;
+    background-color: #fff;
+    border-radius: 0.4rem 0.4rem 0 0;
+    padding: 0.4rem;
+    box-sizing: border-box;
+    overflow-y: auto;
+    padding-bottom: 3.2rem;
+    position: relative;
+    // white-space: pre; // 对应选择题会不换行 只能单独设置
+  }
+  .left-box {
+    margin-right: 0.4rem;
+  }
+  .right-box{
+    overflow: hidden;
+    .right-main {
+      height: calc(100vh - 2rem);
+      overflow-y: auto;
+      padding-bottom: 0.2rem;
+      box-sizing: border-box;
+      white-space: pre;
+    }
+  }
+}
+
+.review-box {
+  background: #f7f7f7;
+  border-radius: 0.4rem;
+  padding: 0.3rem;
+  box-sizing: border-box;
+  margin-top: 0.4rem;
+  & > .text {
+    font-size: 0.32rem;
+    color: #666666;
+    font-weight: normal;
+  }
+}
